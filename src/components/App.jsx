@@ -1,9 +1,7 @@
-import { getTrendingMovies } from 'api/movies-service';
 import { Home } from 'pages/Home';
 import { Movies } from 'pages/Movies';
 import { MovieDetails } from 'pages/MovieDetails';
-import { Cast } from 'pages/Cast';
-import { Reviews } from 'pages/Reviews';
+
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Header } from './Header/Header';
 
@@ -23,7 +21,3 @@ export const App = () => {
     </>
   );
 };
-
-{
-  /* <Route path="*" element={<Navigate to="/" replace={true} />}></Route>; */
-}
