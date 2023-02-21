@@ -1,0 +1,9 @@
+.poster {
+  width: 200px;
+  margin: 15px;
+}
+
+.moviesList {
+  display: flex;
+  flex-wrap: wrap;
+}
