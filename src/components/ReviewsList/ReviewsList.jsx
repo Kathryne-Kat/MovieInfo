@@ -1,7 +1,7 @@
 import { ReviewItem } from './ReviewItem';
 
 export const ReviewsList = ({ reviews }) => {
-  //console.log(reviews);
+  console.log(reviews);
   return (
     <ul className="">
       {reviews &&
