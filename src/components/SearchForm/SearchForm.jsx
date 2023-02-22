@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 
 export const SearchForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams);
 
   const onSubmit = e => {
     e.preventDefault();
