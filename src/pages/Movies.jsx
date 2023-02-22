@@ -12,7 +12,7 @@ export const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('search');
 
-  console.log(query);
+  console.log(setSearchParams);
 
   useEffect(() => {
     if (!query) return;
