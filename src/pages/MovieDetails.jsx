@@ -19,6 +19,7 @@ const MovieDetails = () => {
       try {
         setLoading(true);
         const data = await getMovieDetails(movieId);
+        //console.log(data);
         setMovie(data);
 
         setError(null);

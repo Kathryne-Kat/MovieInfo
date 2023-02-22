@@ -12,12 +12,16 @@ export const MovieInfo = ({
   overview,
   vote_average,
   genres,
+  release_date,
 }) => {
+  const year = release_date;
+
   const movieGenres = genres.map(genre => genre.name).join(', ');
   return (
     <>
       <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt="title" />
-      <h1>{title}</h1>
+      <h2>{title}</h2>
+      <span>{year.slice(0, 4)}</span>
       <p>Vote average: {vote_average}</p>
 
       <h3>Overview</h3>

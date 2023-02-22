@@ -9,10 +9,10 @@ const Movies = () => {
   const [movies, setMovies] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const query = searchParams.get('search');
 
-  console.log(setSearchParams);
+  //console.log(setSearchParams);
 
   useEffect(() => {
     if (!query) return;
