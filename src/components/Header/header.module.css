@@ -1,0 +1,11 @@
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #863fa1a1;
+}
+.navLink {
+  padding: 20px;
+  font-size: 20px;
+  color: rgb(73, 8, 110);
+  font-weight: 500;
+}

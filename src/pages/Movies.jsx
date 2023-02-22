@@ -42,7 +42,6 @@ const Movies = () => {
   return (
     <>
       <section>
-        <h1>Search Movies </h1>
         <SearchForm />
         {!!movies?.length && <MoviesList movies={movies} />}
       </section>

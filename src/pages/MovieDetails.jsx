@@ -40,7 +40,6 @@ const MovieDetails = () => {
   const backPath = location.state?.from ?? '/';
   return (
     <>
-      <h1>Movie Details</h1>
       <BtnBack path={backPath} />
       {movie && <MovieInfo {...movie} />}
       {loading && <Loader />}

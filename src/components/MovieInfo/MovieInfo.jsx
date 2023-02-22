@@ -1,7 +1,8 @@
 // import { Cast } from 'pages/Cast';
 // import { Reviews } from 'pages/Reviews';
 import { lazy, Suspense } from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import css from './movieInfo.module.css';
 
 const LazyCast = lazy(() => import('pages/Cast'));
 const LazyReviews = lazy(() => import('pages/Reviews'));
@@ -15,28 +16,52 @@ export const MovieInfo = ({
   release_date,
 }) => {
   const year = release_date;
-
+  const location = useLocation();
+  const backPath = location.state?.from ?? '/';
   const movieGenres = genres.map(genre => genre.name).join(', ');
   return (
-    <>
-      <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt="title" />
-      <h2>{title}</h2>
-      <span>{year.slice(0, 4)}</span>
-      <p>Vote average: {vote_average}</p>
+    <div className={css.container}>
+      {/* <h1 className={css.titleList}>Movie Details</h1> */}
+      <div className={css.flexContainer}>
+        <img
+          className={css.poster}
+          src={`https://image.tmdb.org/t/p/w300${poster_path}`}
+          alt="title"
+        />
+        <div className={css.content}>
+          <h2 className={css.title}>
+            {title} ({year.slice(0, 4)})
+          </h2>
 
-      <h3>Overview</h3>
-      <p>{overview}</p>
-      <h3>Genres</h3>
-      <p>{movieGenres}</p>
-      <p>Additional information</p>
-      <NavLink to="cast">Cast</NavLink>
-      <NavLink to="reviews">Reviews</NavLink>
+          <p>Vote average: {vote_average}</p>
+
+          <h3 className={css.overview}>Overview</h3>
+          <p>{overview}</p>
+          <h3 className={css.overview}>Genres</h3>
+          <p>{movieGenres}</p>
+        </div>
+      </div>
+      <div className={css.additional}>
+        <p className={css.add}>Additional information</p>
+        <ul>
+          <li className={css.link}>
+            <NavLink to="cast" state={{ from: backPath }}>
+              Cast
+            </NavLink>
+          </li>
+          <li className={css.link}>
+            <NavLink to="reviews" state={{ from: backPath }}>
+              Reviews
+            </NavLink>
+          </li>
+        </ul>
+      </div>
       <Suspense>
         <Routes>
           <Route path="cast" element={<LazyCast />} />
           <Route path="reviews" element={<LazyReviews />} />
         </Routes>
       </Suspense>
-    </>
+    </div>
   );
 };

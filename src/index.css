@@ -40,3 +40,7 @@ a {
 img {
   display: block;
 }
+
+li {
+  list-style: none;
+}

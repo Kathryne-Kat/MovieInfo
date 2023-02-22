@@ -5,9 +5,12 @@ import css from './moviesList.module.css';
 export const MoviesList = ({ movies }) => {
   //console.log(movies);
   return (
-    <ul className={css.moviesList}>
-      {movies && movies.map(movie => <MovieCard key={movie.id} {...movie} />)}
-    </ul>
+    <div className={css.container}>
+   
+      <ul className={css.moviesList}>
+        {movies && movies.map(movie => <MovieCard key={movie.id} {...movie} />)}
+      </ul>
+    </div>
   );
 };
 

@@ -3,6 +3,7 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { getTrendingMovies } from '../api/movies-service';
+import css from '../components/MoviesList//moviesList.module.css';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -32,10 +33,8 @@ const Home = () => {
 
   return (
     <>
-      <section>
-        <h1>Trending Movies </h1>
-        {movies.length > 0 && <MoviesList movies={movies} />}
-      </section>
+      <h1 className={css.titleList}>Trending Movies </h1>
+      <section>{movies.length > 0 && <MoviesList movies={movies} />}</section>
       {loading && <Loader />}
     </>
   );

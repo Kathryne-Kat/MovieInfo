@@ -5,6 +5,7 @@ import css from './moviesList.module.css';
 
 export const MovieCard = ({ id, title, poster_path }) => {
   const location = useLocation();
+  //console.log(location);
 
   if (!poster_path) return;
   const poster = `https://image.tmdb.org/t/p/w200${poster_path}`;
@@ -12,7 +13,7 @@ export const MovieCard = ({ id, title, poster_path }) => {
     <li className={css.poster}>
       <Link to={'/movies/' + id} state={{ from: location }}>
         <img src={poster} alt="title" />
-        <h2>{title}</h2>
+        <h2 className={css.title}>{title}</h2>
       </Link>
     </li>
   );
