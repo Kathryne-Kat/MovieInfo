@@ -1,4 +1,5 @@
 import css from './cast.module.css';
+import PropTypes from 'prop-types';
 
 export const CastListItem = ({ character, name, profile_path }) => {
   let photo = '';
@@ -15,4 +16,10 @@ export const CastListItem = ({ character, name, profile_path }) => {
       <p>Character: {character}</p>
     </li>
   );
+};
+
+CastListItem.propTypes = {
+  character: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  profile_path: PropTypes.string.isRequired,
 };

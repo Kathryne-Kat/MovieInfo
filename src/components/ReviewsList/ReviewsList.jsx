@@ -1,4 +1,5 @@
 import { ReviewItem } from './ReviewItem';
+import PropTypes from 'prop-types';
 
 export const ReviewsList = ({ reviews }) => {
   if (reviews.length === 0) {
@@ -11,4 +12,7 @@ export const ReviewsList = ({ reviews }) => {
       </ul>
     );
   }
+};
+ReviewsList.propType = {
+  movie: PropTypes.object,
 };

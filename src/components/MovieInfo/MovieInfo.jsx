@@ -1,7 +1,6 @@
-// import { Cast } from 'pages/Cast';
-// import { Reviews } from 'pages/Reviews';
 import { lazy, Suspense } from 'react';
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import css from './movieInfo.module.css';
 
 const LazyCast = lazy(() => import('pages/Cast'));
@@ -64,4 +63,11 @@ export const MovieInfo = ({
       </Suspense>
     </div>
   );
+};
+MovieInfo.propTypes = {
+  title: PropTypes.string.isRequired,
+  poster_path: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  genres: PropTypes.array.isRequired,
+  release_date: PropTypes.string.isRequired,
 };

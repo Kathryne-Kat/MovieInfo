@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const ReviewItem = ({ author, content }) => {
   return (
     <li className="">
@@ -5,4 +7,9 @@ export const ReviewItem = ({ author, content }) => {
       <p>{content}</p>
     </li>
   );
+};
+
+ReviewItem.propTypes = {
+  author: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 };
