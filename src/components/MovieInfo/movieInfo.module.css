@@ -35,7 +35,7 @@
   height: 100px;
 }
 
-li {
+li.link {
   margin-left: 20px;
   list-style-type: disc;
   padding-top: 10px;

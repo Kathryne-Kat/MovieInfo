@@ -1,0 +1,12 @@
+.casteList {
+  margin: 0, auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.actors {
+  width: 100px;
+}
+.linkActors {
+  width: 100px;
+  margin-left: 15px;
+}

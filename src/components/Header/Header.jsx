@@ -9,7 +9,7 @@ export const Header = () => {
           Home
         </NavLink>
         <NavLink className={css.navLink} to="/movies">
-          Search
+          Movies
         </NavLink>
       </nav>
     </header>

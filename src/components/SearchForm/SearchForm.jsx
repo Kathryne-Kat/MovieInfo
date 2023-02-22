@@ -15,7 +15,7 @@ export const SearchForm = () => {
 
   return (
     <div className={css.container}>
-      <h1 className={css.titleList}>Search Movies </h1>
+      {/* <h1 className={css.titleList}>Search Movies </h1> */}
       <form className={css.form} onSubmit={onSubmit}>
         <input
           className={css.inputSearch}
