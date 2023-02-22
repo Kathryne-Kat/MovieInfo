@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/415.8ad024e4.chunk.css","mappings":"AAAA,0BAEE,WAAY,CADZ,WAEF,CAEA,8BACE,YAAa,CACb,cACF","sources":["components/MoviesList/moviesList.module.css"],"sourcesContent":[".poster {\n  width: 200px;\n  margin: 15px;\n}\n\n.moviesList {\n  display: flex;\n  flex-wrap: wrap;\n}\n"],"names":[],"sourceRoot":""}
