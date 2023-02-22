@@ -5,7 +5,7 @@ import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -46,3 +46,5 @@ export const MovieDetails = () => {
     </>
   );
 };
+
+export default MovieDetails;

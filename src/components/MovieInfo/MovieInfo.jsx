@@ -1,6 +1,10 @@
-import { Cast } from 'pages/Cast';
-import { Reviews } from 'pages/Reviews';
+// import { Cast } from 'pages/Cast';
+// import { Reviews } from 'pages/Reviews';
+import { lazy, Suspense } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
+
+const LazyCast = lazy(() => import('pages/Cast'));
+const LazyReviews = lazy(() => import('pages/Reviews'));
 
 export const MovieInfo = ({
   title,
@@ -23,10 +27,12 @@ export const MovieInfo = ({
       <p>Additional information</p>
       <NavLink to="cast">Cast</NavLink>
       <NavLink to="reviews">Reviews</NavLink>
-      <Routes>
-        <Route path="cast" element={<Cast />} />
-        <Route path="reviews" element={<Reviews />} />
-      </Routes>
+      <Suspense>
+        <Routes>
+          <Route path="cast" element={<LazyCast />} />
+          <Route path="reviews" element={<LazyReviews />} />
+        </Routes>
+      </Suspense>
     </>
   );
 };
