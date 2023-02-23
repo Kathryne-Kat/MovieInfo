@@ -13,12 +13,8 @@ export const MovieCard = ({ id, title, poster_path }) => {
     <li className={css.poster}>
       <Link to={'/movies/' + id} state={{ from: location }}>
         {!poster_path ? (
-          ''
+          <img src={'/src/img/http-404-not-found-error.jpg'} alt={title} />
         ) : (
-          // <img
-          //   src={'/src/img/http-404-not-found-error.jpg'}
-          //   alt={title}
-          // />
           <img src={poster} alt="title" />
         )}
         <h2 className={css.title}>{title}</h2>
