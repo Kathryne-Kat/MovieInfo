@@ -1,10 +1,6 @@
-import { lazy, Suspense } from 'react';
-import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import css from './movieInfo.module.css';
-
-const LazyCast = lazy(() => import('pages/Cast'));
-const LazyReviews = lazy(() => import('pages/Reviews'));
 
 export const MovieInfo = ({
   title,
@@ -55,12 +51,7 @@ export const MovieInfo = ({
           </li>
         </ul>
       </div>
-      <Suspense>
-        <Routes>
-          <Route path="cast" element={<LazyCast />} />
-          <Route path="reviews" element={<LazyReviews />} />
-        </Routes>
-      </Suspense>
+      <Outlet />
     </div>
   );
 };
