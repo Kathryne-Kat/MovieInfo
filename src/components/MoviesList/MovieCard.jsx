@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import notImag from 'img/http-404-not-found-error.jpg';
+import notImag from 'img/pngwing.com (3).png';
 
 import css from './moviesList.module.css';
 

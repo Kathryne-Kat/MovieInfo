@@ -1,6 +1,6 @@
 import css from './cast.module.css';
 import PropTypes from 'prop-types';
-import notImag from 'img/http-404-not-found-error.jpg';
+import notImag from 'img/pngwing.com (5).png';
 
 export const CastListItem = ({ character, name, profile_path }) => {
   const posterCast = `https://image.tmdb.org/t/p/w200${profile_path}`;
