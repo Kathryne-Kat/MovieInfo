@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import css from './movieInfo.module.css';
+import Player from 'components/Player/Player';
 
 export const MovieInfo = ({
   title,
@@ -14,6 +15,7 @@ export const MovieInfo = ({
   const location = useLocation();
   const backPath = location.state?.from ?? '/';
   const movieGenres = genres.map(genre => genre.name).join(', ');
+
   return (
     <div className={css.container}>
       {/* <h1 className={css.titleList}>Movie Details</h1> */}
@@ -27,13 +29,12 @@ export const MovieInfo = ({
           <h2 className={css.title}>
             {title} ({year.slice(0, 4)})
           </h2>
-
           <p>Vote average: {vote_average}</p>
-
           <h3 className={css.overview}>Overview</h3>
           <p>{overview}</p>
           <h3 className={css.overview}>Genres</h3>
           <p>{movieGenres}</p>
+          {/* <Player source="http://media.w3.org/2010/05/sintel/trailer.mp4" /> */}
         </div>
       </div>
       <div className={css.additional}>

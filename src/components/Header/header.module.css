@@ -1,10 +1,22 @@
+.header {
+  background: rgb(79, 69, 58);
+  background: linear-gradient(
+    86deg,
+    rgba(79, 69, 58, 1) 0%,
+    rgba(255, 141, 52, 0.8715861344537815) 50%,
+    rgba(79, 69, 58, 1) 99%
+  );
+
+  /* -webkit-box-shadow: 2px 7px 5px -1px rgba(148, 145, 148, 1);
+  -moz-box-shadow: 2px 7px 5px -1px rgba(148, 145, 148, 1);
+  box-shadow: 2px 7px 5px -1px rgba(148, 145, 148, 1); */
+}
+
 .nav {
+  width: 1200px;
+  margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 2px 7px 5px -1px rgba(148, 145, 148, 1);
-  -moz-box-shadow: 2px 7px 5px -1px rgba(148, 145, 148, 1);
-  box-shadow: 2px 7px 5px -1px rgba(148, 145, 148, 1);
 }
 .navLink {
   padding: 20px;
@@ -16,3 +28,7 @@
 .navLink:focus {
   color: #e72596;
 }
+/* .active {
+  color: #e72596;
+  text-decoration: underline;
+} */

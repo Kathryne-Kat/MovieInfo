@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-
+import css from './App.module.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { Loader } from './Loader';
@@ -12,19 +12,21 @@ const LazyReviews = lazy(() => import('pages/Reviews'));
 
 export const App = () => {
   return (
-    <>
+    <div className={css.wrap}>
       <Header />
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<LazyHome />} />
-          <Route path="movies" element={<LazyMovies />} />
-          <Route path="movies/:movieId/*" element={<LazyMovieDetails />}>
-            <Route path="cast" element={<LazyCast />} />
-            <Route path="reviews" element={<LazyReviews />} />
-          </Route>
-          <Route path="*" element={<Navigate to="/" />}></Route>
-        </Routes>
-      </Suspense>
-    </>
+      <div className={css.section}>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<LazyHome />} />
+            <Route path="movies" element={<LazyMovies />} />
+            <Route path="movies/:movieId/*" element={<LazyMovieDetails />}>
+              <Route path="cast" element={<LazyCast />} />
+              <Route path="reviews" element={<LazyReviews />} />
+            </Route>
+            <Route path="*" element={<Navigate to="/" />}></Route>
+          </Routes>
+        </Suspense>
+      </div>
+    </div>
   );
 };

@@ -1,0 +1,24 @@
+.wrap {
+  /* background: rgb(252, 104, 104);
+  background: linear-gradient(
+    180deg,
+    rgba(252, 104, 104, 0.6166841736694677) 0%,
+    rgba(246, 147, 161, 1) 50%,
+    rgba(252, 247, 247, 1) 99%
+  ); */
+  background-image: url('./../img/1663851840_g-4_1.jpg');
+  background-size: cover;
+  height: 100vw;
+}
+.section {
+  width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: rgba(236, 180, 116, 0.712) 0%;
+  /* background: linear-gradient(
+    180deg,
+    rgba(252, 248, 104, 0.6166841736694677) 0%,
+    rgba(242, 246, 147, 0.7399334733893557) 50%,
+    rgba(252, 252, 247, 1) 99%
+  ); */
+}
