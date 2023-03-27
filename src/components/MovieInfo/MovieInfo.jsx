@@ -1,7 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import css from './movieInfo.module.css';
-import Player from 'components/Player/Player';
+// import Player from 'components/Player/Player';
 
 export const MovieInfo = ({
   title,
