@@ -4,7 +4,7 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { SearchForm } from 'components/SearchForm/SearchForm';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { getTrendingMovies, getPopularMovies } from '../api/movies-service';
+import { getPopularMovies } from '../api/movies-service';
 
 const Movies = () => {
   const [movies, setMovies] = useState(null);

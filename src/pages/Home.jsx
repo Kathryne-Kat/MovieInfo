@@ -3,7 +3,7 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 
 import { useEffect, useState } from 'react';
 import { getTrendingMovies } from '../api/movies-service';
-import css from '../components/MoviesList//moviesList.module.css';
+// import css from '../components/MoviesList//moviesList.module.css';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
