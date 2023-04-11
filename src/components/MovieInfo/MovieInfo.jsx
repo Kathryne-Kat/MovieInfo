@@ -41,12 +41,20 @@ export const MovieInfo = ({
         <p className={css.add}>Additional information</p>
         <ul>
           <li className={css.link}>
-            <NavLink to="cast" state={{ from: backPath }}>
+            <NavLink
+              className={css.link_info}
+              to="cast"
+              state={{ from: backPath }}
+            >
               Cast
             </NavLink>
           </li>
           <li className={css.link}>
-            <NavLink to="reviews" state={{ from: backPath }}>
+            <NavLink
+              className={css.link_info}
+              to="reviews"
+              state={{ from: backPath }}
+            >
               Reviews
             </NavLink>
           </li>

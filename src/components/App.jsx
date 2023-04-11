@@ -14,6 +14,7 @@ export const App = () => {
   return (
     <div className={css.wrap}>
       <Header />
+
       <div className={css.section}>
         <Suspense fallback={<Loader />}>
           <Routes>
@@ -27,6 +28,9 @@ export const App = () => {
           </Routes>
         </Suspense>
       </div>
+      <footer className={css.footer}>
+        Movie App create by Kathryne-Kat 2023
+      </footer>
     </div>
   );
 };

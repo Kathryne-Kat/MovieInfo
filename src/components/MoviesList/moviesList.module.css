@@ -8,6 +8,8 @@
 .poster {
   width: 200px;
   margin: 15px;
+  border-radius: 5px;
+  background-color: #fcfa935d;
 }
 
 .moviesList {
@@ -17,7 +19,9 @@
 }
 .title {
   font-size: 20px;
-  color: rgb(73, 8, 110);
+  color: #2b2a2a;
+  /* color: #ffd903; */
+  text-align: center;
 }
 
 .titleList {
@@ -26,5 +30,6 @@
   margin-bottom: 10px;
 }
 .posterImg {
+  border-radius: 5px;
   width: 200px;
 }

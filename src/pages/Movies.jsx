@@ -4,6 +4,7 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { SearchForm } from 'components/SearchForm/SearchForm';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { getTrendingMovies, getPopularMovies } from '../api/movies-service';
 
 const Movies = () => {
   const [movies, setMovies] = useState(null);
@@ -13,6 +14,22 @@ const Movies = () => {
   const query = searchParams.get('search');
 
   //console.log(setSearchParams);
+
+  useEffect(() => {
+    const getTrending = async () => {
+      try {
+        setLoading(true);
+        const data = await getPopularMovies();
+        setMovies(data);
+        setError(null);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getTrending();
+  }, []);
 
   useEffect(() => {
     if (!query) return;

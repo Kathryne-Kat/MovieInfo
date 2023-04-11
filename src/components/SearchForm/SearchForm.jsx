@@ -20,7 +20,7 @@ export const SearchForm = () => {
         <input
           className={css.inputSearch}
           type="text"
-          placeholder="Enter name of movie"
+          placeholder="Enter movie"
           name="query"
         />
         <button className={css.btnSearch} type="submit">

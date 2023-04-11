@@ -13,6 +13,16 @@ export const getTrendingMovies = async () => {
   return data.results;
 };
 
+export const getPopularMovies = async () => {
+  const { data } = await axios.get(`${BASE_URL}trending/all/week`, {
+    params: {
+      api_key: API_KEY,
+    },
+  });
+
+  return data.results;
+};
+
 export const getMovieByQuery = async query => {
   const { data } = await axios.get(`${BASE_URL}search/movie`, {
     params: {
