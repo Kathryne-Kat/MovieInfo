@@ -29,7 +29,7 @@ export const App = () => {
         </Suspense>
       </div>
       <footer className={css.footer}>
-        Movie App create by Kathryne-Kat 2023
+        Movie App create by Kathryne-Kat | 2023
       </footer>
     </div>
   );
